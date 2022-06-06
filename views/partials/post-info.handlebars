@@ -1,14 +1,14 @@
-<div class="card mb-6">
-  <header class="card-header card-header-title">
-    
-        <div class="column">
-      <a href="/post/{{id}}">{{title}} </a></p>
-      </div>   
-  </header>
-
-  <div class="card-content">
-      <div class="content">
-          {{post_content}}
-      </div>
-        
+<div class="card mb-1">
+    <div class="card-header card-title"> 
+       {{title}}
     </div>
+    <div class="card-body"> 
+        {{post_content}}
+        <br>
+        <div class="post-comments-info float-end">
+           By {{user.username}} on {{format_date created_at}}
+            |
+           <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+        </div>
+    </div>
+  </div>

@@ -8,25 +8,33 @@ body, html {
   margin: 0;
   font-family: sans-serif;
   color: #333;
+  background: linear-gradient(to bottom, white, #0af5cd35);
 }
 
 a {
   text-decoration: none;
+  color: rgb(83, 82, 82);
   font-weight: bold;
-  color: black;
+  transition: color .1s;
 }
 
 a:hover {
-  color: #3486eb;
+  color: darkcyan;
 }
 
 button {
+  background-color: #0af5cd35;
   border: 0;
   padding: 1%;
+  color: rgb(83, 82, 82);
   font-weight: bold;
   transition: background-color .1s;
   cursor: pointer;
   border-radius: 5px;
+}
+
+button:hover {
+  background-color: #8cfce935;
 }
 
 .post-list {
@@ -42,7 +50,7 @@ textarea, input {
 
 textarea:focus, input:focus {
   outline: none;
-  border: 1px solid #3486eb;
+  border: 1px solid #0af5cd35;
 }
 
 textarea {
@@ -75,6 +83,10 @@ header {
   padding: 0 1%;
 }
 
+header h1 {
+  font-size: 1em;
+}
+
 main {
   flex: 1;
   padding: 2% 4%;
@@ -86,24 +98,26 @@ main {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #225ca3;
+  color: rgb(83, 82, 82);
   font-size: 100%;
   font-weight: bold;
   transition: color .1s;
   margin-left: 16px;
+  background-color: #0af5cd35;
 }
 
 .btn-no-style:hover {
   background: none;
-  color: #3486eb;
+  color: #0af5cef5;
 }
 
 .delete-post-btn {
-  background-color: #d41414;
+  background-color: #030e6b;
+  color: white;
 }
 
 .delete-post-btn:hover {
-  background-color: #ff643d;
+  background-color: #0af5cef5;
 }
 
 .post {
@@ -132,7 +146,7 @@ main {
 }
 
 .comment:nth-child(odd) {
-  background-color: #fff5eb;
+  background-color: #fff7f7;
 }
 
 .comment .meta {
@@ -141,24 +155,31 @@ main {
   opacity: .6;
 }
 
+.new-post-form input {
+  width: 300px;
+}
+
 .edit-post-form {
   margin-bottom: 5%;
 }
 
-footer {
+.card-header {
+  background-color: #0af5cd35;
+  font-weight: bold;
+}
+
+.post-comments-info {
+  font-weight: bold;
+}
+
+ ul {
+  list-style-type: none;
+ }
+
+ footer {
   border-top: 1px solid #ccc;
   display: flex;
   justify-content: center;
   padding: 1%;
   font-size: 110%;
-}
-
-.card {
-    margin-bottom: 1em;
-    margin-top: 1em;
-}
-
-.rows{
-    display:flex;
-    flex-direction: column;
 }

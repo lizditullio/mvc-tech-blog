@@ -1,17 +1,21 @@
-  <div class="mb-5 pt-3">
+  <div>
         <a href="/dashboard/create/"><button id="create-post" class="button is-primary is-pulled-right">create post</button></a>
         
-        <h2 class="title pb-4">your posts</h2><hr>
+        <h2 class="title font-weight-bold">Your posts</h2>
+    </div>
 {{#if posts.length}}
 <section>
-  <h2>Your Posts</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
-    {{/each}}
-  </ol>
+{{#each posts as |post|}}
+
+  {{> post-info post}}
+<button>
+      <a href="/dashboard/edit/{{id}}" class="edit-link ml-4">Edit post</a>
+ </button>
+ <br>
+ <br>
+{{/each}}
 </section>
+{{else}}
+<br>
+<h5> You have no posts yet.</h5>
 {{/if}}
