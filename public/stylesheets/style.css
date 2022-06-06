@@ -22,6 +22,10 @@ a:hover {
   color: darkcyan;
 }
 
+nav a{
+  margin-left: 10px;
+}
+
 button {
   background-color: #0af5cd35;
   border: 0;
