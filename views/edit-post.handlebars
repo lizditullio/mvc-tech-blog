@@ -8,8 +8,7 @@
       <input name="post-title" type="text" value="{{post.title}}" />
     </div>
     <div>
-      {{post_content}}
-      By you on {{format_date post.created_at}}
+      {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
       |
       <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
     </div>
@@ -18,13 +17,13 @@
   </form>
 </article>
 
-<form class="comment-form ">
+<form class="comment-form">
   <div>
     <textarea name="comment-body"></textarea>
   </div>
 
   <div>
-    <button type="submit" id="comment-btn">add comment</button>
+    <button type="submit">add comment</button>
   </div>
 </form>
 
